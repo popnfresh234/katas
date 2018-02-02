@@ -8,6 +8,7 @@ var queen2 = [4,6];
 // var queen2 = [7, 5];
 
 
+console.log("------------------------")
 drawBoard(queen1, queen2);
 console.log("------------------------")
 checkThreat(queen1, queen2);
@@ -18,9 +19,9 @@ function drawBoard(queen1, queen2) {
   for(var i = 0; i < boardLength; i ++ ){
     for (var j = 0; j < boardWidth; j ++){
       if(queen1[0] === i && queen1[1] === j){
-        board += " X ";
+        board += " 1 ";
       }else if(queen2[0] === i && queen2[1] === j){
-        board += " Y ";
+        board += " 1 ";
       }
       else{
         board += " 0 "

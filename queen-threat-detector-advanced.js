@@ -7,7 +7,7 @@ var boardHeight = 8;
 var boardWidth = 8;
 
 var queen1 = [7,1];
-var queen2 = [0,1];
+var queen2 = [4,4];
 
 // var queen1 = [0, 0];
 // var queen2 = [7, 5];
@@ -15,11 +15,13 @@ var queen2 = [0,1];
 console.log("------------------------")
 drawBoard(queen1, queen2);
 console.log("------------------------")
+
+
 var threat = (checkThreat(queen1, queen2));
 if(threat === horizontalThreat){
   console.log("Horizontal threat!");
 }else if (threat === verticalThreat){
-  console.log("Horizontal threat!");
+  console.log("Vertical threat!");
 }else if (threat === diagonalThreat){
   console.log("Diagonal threat!");
 }else console.log("No threat!");

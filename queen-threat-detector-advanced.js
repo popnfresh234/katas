@@ -6,8 +6,8 @@ var verticalThreat = 997;
 var boardHeight = 8;
 var boardWidth = 8;
 
-var queen1 = [4,6];
-var queen2 = [1,3];
+var queen1 = [7,1];
+var queen2 = [0,1];
 
 // var queen1 = [0, 0];
 // var queen2 = [7, 5];
@@ -138,22 +138,28 @@ function returnDiagonalValues(queen1, queen2){
   var positions = [];
   var distance = Math.abs(queen1[0] - queen2[0]);
 
+  //If Q1 is further down the board than Q2
   if(!isQueen1Lower(queen1, queen2)){
     if(isQueen1Left(queen1, queen2)){
+      //If Q1 is left of Q2
       for(var i = 1; i < distance; i ++){
         positions.push([queen1[0] + i, queen1[1]+ i])
       }
     }else{
+      //Q1 is right of Q2
       for(var i = 1; i < distance; i++){
         positions.push([queen1[0] + i, queen1[1] - i]);
       }
     }
   }else{
+    //Q2 is further down the board than Q1
     if(isQueen1Left(queen1,queen2)){
+      //Q1 is left of Q2
       for(var i = 0; i < distance; i ++){
         positions.push([queen1[0] - i, queen1[1] + i]);
       }
     }else{
+      //Q2 is left of Q1
       for (var i = 0; i < distance; i ++){
         positions.push([queen1[0] - i, queen1[1]- i])
       }
